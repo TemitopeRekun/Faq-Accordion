@@ -1,82 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Faq Accordion</title>
-      <link rel="stylesheet" href="style.css" />
-   </head>
-   <body>
-      <main class="container">
-         <div class="illustration">
-            <div class="woman">
-               <img src="/images/illustration-woman-online-mobile.svg" alt="" />
-            </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Faq Accordion</title>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Kumbh+Sans" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main class="container">
+			<div class="illustration">
+				<div class="woman">
+					<picture>
+						<source
+							media="(min-width: 700px)"
+							srcset="images/illustration-woman-online-desktop.svg" />
+						<source
+							media="(max-width: 700px)"
+							srcset="images/illustration-woman-online-mobile.svg" />
+						<img src="images/illustration-woman-online-mobile.svg" alt="" />
+					</picture>
+				</div>
 
-            <div class="background">
-                <img src="/images/bg-pattern-mobile.svg" alt="" /></div>
-         </div>
+				<div class="box">
+					<img src="images/illustration-box-desktop.svg" alt="" />
+				</div>
 
-         <div>
-            <h2>Faq</h2>
-            <button class="accordion">
-               How may team members can i invite?
-            </button>
-            <div class="panel">
-               <p>
-                  You can invite up to 2 additional users on the Free plan.
-                  There is no limit on team members for the Premium plan.
-               </p>
-            </div>
+				<div class="back-ground">
+					<picture>
+						<source
+							media="(min-width: 700px)"
+							srcset="images/bg-pattern-desktop.svg" />
+						<source
+							media="(max-width: 700px)"
+							srcset="images/bg-pattern-mobile.svg" />
+						<img src="images/bg-pattern-mobile.svg" alt="" />
+					</picture>
+				</div>
+			</div>
 
-            <hr />
+			<div class="text">
+				<h2>FAQ</h2>
+				<button class="accordion">
+					How may team members can i invite?
+				</button>
+				<div class="panel">
+					<p>
+						You can invite up to 2 additional users on the Free plan.
+						There is no limit on team members for the Premium plan.
+					</p>
+				</div>
 
-            <button class="accordion">What is the maximum upload file?</button>
-            <div class="panel">
-               <p>
-                  No more than 2GB. All files in your account must fit your
-                  allotted storage space.
-               </p>
-            </div>
+				<hr />
 
-            <hr />
+				<button class="accordion">What is the maximum upload file?</button>
+				<div class="panel">
+					<p>
+						No more than 2GB. All files in your account must fit your
+						allotted storage space.
+					</p>
+				</div>
 
-            <button class="accordion">How do i reset my password?</button>
-            <div class="panel">
-               <p>
-                  Click “Forgot password” from the login page or “Change
-                  password” from your profile page. A reset link will be emailed
-                  to you.
-               </p>
-            </div>
+				<hr />
 
-            <hr />
+				<button class="accordion">How do i reset my password?</button>
+				<div class="panel">
+					<p>
+						Click “Forgot password” from the login page or “Change
+						password” from your profile page. A reset link will be emailed
+						to you.
+					</p>
+				</div>
 
-            <button class="accordion">Can I cancel my subscription?</button>
-            <div class="panel">
-               <p>
-                  Yes! Send us a message and we'll process your request no
-                  questions asked.
-               </p>
-            </div>
+				<hr />
 
-            <hr />
+				<button class="accordion">Can I cancel my subscription?</button>
+				<div class="panel">
+					<p>
+						Yes! Send us a message and we'll process your request no
+						questions asked.
+					</p>
+				</div>
 
-            <button class="accordion">
-               Do you provide additional support?
-            </button>
-            <div class="panel">
-               <p>
-                  Chat and email support is available 24/7. Phone lines are open
-                  during normal business hours.
-               </p>
-            </div>
+				<hr />
 
-            <hr />
-         </div>
-      </main>
+				<button class="accordion">
+					Do you provide additional support?
+				</button>
+				<div class="panel">
+					<p>
+						Chat and email support is available 24/7. Phone lines are open
+						during normal business hours.
+					</p>
+				</div>
 
-      <script src="code.js"></script>
-   </body>
+				<hr />
+			</div>
+		</main>
+
+		<script src="code.js"></script>
+	</body>
 </html>

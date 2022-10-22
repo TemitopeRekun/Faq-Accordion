@@ -1,89 +1,204 @@
 * {
-   box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 h1,
 h2,
 p,
 body {
-   margin: 0;
+	margin: 0;
 }
 
 p {
-   color: hsl(240, 6%, 50%);
+	color: hsl(240, 6%, 50%);
+	font-family: Kumbh Sans, sans-serif;
+	font-weight: 400;
 }
 
 h2 {
-   padding-top: 30px;
-   padding-bottom: 20px;
-   font-size: 30px;
-   text-align: center;
-   color: hsl(238, 29%, 16%);
+	font-family: Kumbh Sans, sans-serif;
+	font-weight: 700;
+	padding-top: 120px;
+	padding-bottom: 20px;
+	font-size: 30px;
+	text-align: center;
+	color: hsl(238, 29%, 16%);
 }
 
 hr {
-   border: 1px solid hsl(240, 5%, 91%);
+	border: 1px solid hsl(240, 5%, 91%);
+	margin-inline: 19px;
 }
 
 body {
-   font-size: 12px;
-   height: 100vh;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: hsl(273, 75%, 66%);
-   background-image: linear-gradient(
-      180deg,
-      hsl(273, 75%, 66%),
-      hsl(240, 73%, 65%)
-   );
+	font-size: 12px;
+	height: 130vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(273, 75%, 66%);
+	background-image: linear-gradient(
+		180deg,
+		hsl(273, 75%, 66%),
+		hsl(240, 73%, 65%)
+	);
 }
 
 .container {
-   width: 300px;
-   height: 400px;
-   background-color: white;
-   border-radius: 20px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	height: 550px;
+	margin-top: 40px;
+	background-color: white;
+	border-radius: 20px;
 }
 
-.woman > img {
-   height: 200px;
-   width: 200px;
-   margin-top: -90px;
-   margin-left: 45px;
+.woman img {
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	top: -115px;
+	left: 45px;
 }
 
-.background > img {
-   height: 100px;
-   width: 200px;
-   margin-left: 23px;
-   margin-top: -120px;
+.box {
+	width: 150px;
+	height: 150px;
+	display: none;
+}
+
+.text {
+	margin-inline: 5px;
+}
+
+.back-ground img {
+	position: absolute;
+	height: fit-content;
+	height: 90px;
+	width: fit-content;
+	left: 40px;
+	top: 0px;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-   background-color: transparent;
-   border: none;
-   color: hsl(240, 6%, 50%);
-   cursor: pointer;
-   padding: 18px;
-   width: 100%;
-   text-align: left;
-   outline: none;
-   transition: 0.4s;
+	font-family: Kumbh Sans, sans-serif;
+	background-color: transparent;
+	border: none;
+	color: hsl(240, 6%, 50%);
+	cursor: pointer;
+	padding: 14px;
+	width: 100%;
+	text-align: left;
+	outline: none;
+	transition: 0.4s;
+}
+
+.accordion:after {
+	content: url(images/icon-arrow-down.svg);
+	float: right;
+
+	transform: rotateX(0deg);
+}
+
+.active::after {
+	transform: rotateX(180deg);
 }
 
 /* Add the background color to the button if it is clicked on the (add the .active class with JS), and when you move the mouse over it(hover) */
 .active,
 .accordion:hover {
-   color: hsl(238, 29%, 16%);
+	font-weight: 700;
+	color: hsl(238, 29%, 16%);
 }
 
-/* accordion panel. NOTE: hidden by default */
+/* accordion panel. NOTE: hidden by default, code the animation easing out */
 .panel {
-   padding: 0px 18px;
-   display: none;
-   background-color: transparent;
-   overflow: hidden;
+	padding: 0px 18px;
+	max-height: 0;
+	margin-right: 30px;
+	background-color: transparent;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+/* Desktop View (Responsive) */
+@media screen and (min-width: 700px) {
+	.container {
+		flex-direction: row;
+		justify-content: space-between;
+		width: 800px;
+		height: 500px;
+		z-index: 1;
+	}
+
+	h2 {
+		margin-left: 1rem;
+		text-align: left;
+		padding-top: 70px;
+	}
+
+	.illustration {
+		width: 45%;
+	}
+
+	.text {
+		width: 55%;
+		margin-inline: 60px;
+	}
+
+	.box {
+		position: absolute;
+		display: block;
+		top: 206px;
+		left: -80px;
+		z-index: 5;
+	}
+
+	.box img{
+		position: absolute;
+		overflow: visible;
+		/* z-index: 5; */
+	}
+
+	.woman {
+		position: relative;
+		/* background-color: red; */
+		overflow: hidden;
+		height: 420px;
+		width: 400px;
+		z-index: 5;
+	}
+
+	.woman img {
+		position: absolute;
+		/* background-color: aqua; */
+		width: 430px;
+		height: 330px;
+		top: 80px;
+		left: -80px;
+		z-index: 5;
+	}
+
+	.back-ground {
+		/* background-color: blue; */
+		position: relative;
+		/* height: 500px; */
+		width: 500px;
+		z-index: 1;
+		/* overflow: hidden; */
+	}
+
+	.back-ground img {
+		/* background-color: brown; */
+		position: absolute;
+		width: 800px;
+		height: 820px;
+		left: -450px;
+		top: -640px;
+		z-index: -1;
+	}
 }
