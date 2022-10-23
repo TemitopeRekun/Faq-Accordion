@@ -27,7 +27,7 @@ h2 {
 
 hr {
 	border: 1px solid hsl(240, 5%, 91%);
-	margin-inline: 19px;
+	margin-inline: 12px;
 }
 
 body {
@@ -50,8 +50,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: 300px;
-	height: 550px;
-	margin-top: 40px;
+	height: 500px;
+	margin-top: 90px;
 	background-color: white;
 	border-radius: 20px;
 }
@@ -90,7 +90,7 @@ body {
 	border: none;
 	color: hsl(240, 6%, 50%);
 	cursor: pointer;
-	padding: 14px;
+	padding: 10px;
 	width: 100%;
 	text-align: left;
 	outline: none;
