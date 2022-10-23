@@ -32,7 +32,7 @@ hr {
 
 body {
 	font-size: 12px;
-	height: 130vh;
+	height: 100vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -65,8 +65,8 @@ body {
 }
 
 .box {
-	width: 150px;
-	height: 150px;
+	width: 10px;
+	height: 10px;
 	display: none;
 }
 
@@ -104,7 +104,7 @@ body {
 	transform: rotateX(0deg);
 }
 
-.active::after {
+.active:after {
 	transform: rotateX(180deg);
 }
 
@@ -113,6 +113,10 @@ body {
 .accordion:hover {
 	font-weight: 700;
 	color: hsl(238, 29%, 16%);
+}
+
+.accordion:hover {
+	color: hsl(14, 88%, 65%);
 }
 
 /* accordion panel. NOTE: hidden by default, code the animation easing out */
@@ -151,54 +155,58 @@ body {
 	}
 
 	.box {
-		position: absolute;
+		position: relative;
+		width: 175px;
+		height: 100px;
 		display: block;
-		top: 206px;
-		left: -80px;
+		top: -210px;
+		left: -60px;
 		z-index: 5;
 	}
 
-	.box img{
+	.box > img {
+		width: 100%;
 		position: absolute;
-		overflow: visible;
-		/* z-index: 5; */
+		top: -7px;
+		left: -26px;
+	}
+
+	.container:hover .box img {
+		top: -8px;
+		left: -62px;
+		transition: 0.2s ease-in;
 	}
 
 	.woman {
 		position: relative;
-		/* background-color: red; */
 		overflow: hidden;
 		height: 420px;
 		width: 400px;
-		z-index: 5;
 	}
 
 	.woman img {
 		position: absolute;
-		/* background-color: aqua; */
 		width: 430px;
 		height: 330px;
 		top: 80px;
 		left: -80px;
-		z-index: 5;
 	}
 
 	.back-ground {
-		/* background-color: blue; */
 		position: relative;
-		/* height: 500px; */
-		width: 500px;
-		z-index: 1;
-		/* overflow: hidden; */
+		height: 500px;
+		width: auto;
+		left: 0px;
+		top: -520px;
+		overflow: hidden;
 	}
 
 	.back-ground img {
-		/* background-color: brown; */
 		position: absolute;
 		width: 800px;
 		height: 820px;
 		left: -450px;
-		top: -640px;
+		top: -220px;
 		z-index: -1;
 	}
 }

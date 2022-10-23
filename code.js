@@ -4,9 +4,10 @@ var i;
 for (let i = 0; i < acc.length; i++) {
 	acc[i].addEventListener("click", function () {
 		for (let j = 0; j < acc.length; j++) {
-			acc[j].classList.remove("active");
+			
 			if (j != i) {
 				acc[j].nextElementSibling.style.maxHeight = null;
+				acc[j].classList.remove("active");
 			}
 		}
 
