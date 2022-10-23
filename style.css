@@ -49,9 +49,8 @@ body {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	width: 300px;
+	width: 370px;
 	height: 500px;
-	margin-top: 90px;
 	background-color: white;
 	border-radius: 20px;
 }
@@ -61,7 +60,7 @@ body {
 	height: 200px;
 	width: 200px;
 	top: -115px;
-	left: 45px;
+	left: 85px;
 }
 
 .box {
@@ -79,7 +78,7 @@ body {
 	height: fit-content;
 	height: 90px;
 	width: fit-content;
-	left: 40px;
+	left: 82px;
 	top: 0px;
 }
 
